@@ -1,5 +1,9 @@
 # Auction
-Auction example with Akka actors
+Auction example with Akka actors.
+Akka framework used because it provides scalability without the CPU overhead caused by multiple threads.
+
+Applied a well know pattern ( EIP) "scatter - gatherer"
+
 This is backend library for auction house for their online auction system so it supports the following operations:(assume we have in memory key-value store lib and a unique id generator available)
 
 
@@ -16,3 +20,18 @@ This is backend library for auction house for their online auction system so it 
 
 
     Participant/Auctioneer queries the latest action of an item by item name. The library returns the status of the auction if there is any, if the item is sold, it should return the information regarding the price sold and to whom it was sold to.
+
+build:
+
+download zip and from $BASE execute:
+
+mvn clean compile assembly:single
+
+run:
+
+java -jar target/AuctionHouse-1.0-SNAPSHOT.jar
+
+
+
+
+

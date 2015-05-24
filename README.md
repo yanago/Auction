@@ -29,7 +29,7 @@ mvn clean compile assembly:single
 
 run:
 
-java -jar target/AuctionHouse-1.0-SNAPSHOT.jar
+java -jar target/AuctionHouse-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 
 
